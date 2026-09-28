@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maheen Masoud | Personal Website</title>
+<meta name="description" content="Maheen Masoud — Computer Science Student & Software Engineer.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<canvas id="stars"></canvas>
+<div class="nebula-layer">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
+
+<nav class="nav-dots">
+  <a href="#home"><span class="dot-label">Home</span></a>
+  <a href="#about"><span class="dot-label">About</span></a>
+  <a href="#experience"><span class="dot-label">Experience</span></a>
+  <a href="#explore"><span class="dot-label">Explore</span></a>
+</nav>
+
+<header id="home" class="hero">
+  <h1 class="hero-name">Maheen Masoud</h1>
+  <p class="hero-sub">&gt; <span class="typed"></span><span class="caret">&nbsp;</span></p>
+  <a href="#about" class="scroll-cue">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </a>
+</header>
+
+<section id="about" class="section-wrap">
+  <div class="container">
+    <div class="reveal">
+      <div class="avatar-card">
+        <div class="avatar-inner">
+          <img src="https://avatars.githubusercontent.com/maheenmasoud" alt="Maheen Masoud">
+        </div>
+      </div>
+    </div>
+    <h2 class="section-title reveal">About Me</h2>
+    <div class="bio-panel reveal">
+      <p>I am a computer science student with a passion for software engineering, AI, and developing impactful solutions. I love exploring the space between elegant code and real-world impact — one project at a time.</p>
+      <div class="social-row">
+        <a href="https://www.linkedin.com/in/maheen-masoud-b63360209/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.36 4.27 5.44v6.3zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+        </a>
+        <a href="https://github.com/maheenmasoud" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.61-3.37-1.2-3.37-1.2-.45-1.18-1.11-1.49-1.11-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.33 1.1 2.9.84.09-.66.34-1.1.62-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.27 2.76 1.05a9.4 9.4 0 0 1 5.02 0c1.92-1.32 2.76-1.05 2.76-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.8-4.58 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section-wrap" style="background: rgba(255,255,255,0.02);">
+  <div class="container">
+    <h2 class="section-title reveal">Previous Experience</h2>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-role">Machine Learning Software Engineer Intern</div>
+        <div class="timeline-org">Asurion</div>
+        <p class="desc">Built and shipped ML-driven features, working across data pipelines and production software.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-role">Software Engineer Intern</div>
+        <div class="timeline-org">FairMarkit</div>
+        <p class="desc">Contributed to full-stack development on a procurement technology platform.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-role">Research Fellow — AI, Graph Theory</div>
+        <div class="timeline-org">Hamilton College</div>
+        <p class="desc">Researched applications of graph theory to AI systems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="explore" class="section-wrap">
+  <div class="container">
+    <h2 class="section-title reveal">Explore More...</h2>
+    <div class="explore-row reveal">
+      <a href="#" class="glass-btn" id="resume-button">
+        📄 Resume
+      </a>
+      <a href="projects.html" class="glass-btn">
+        🚀 My Projects
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="egg">1 + 1 = 10</p>
+</footer>
+
+<div id="resumeModal" class="modal-overlay">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>My Resume</h2>
+      <button class="modal-close" aria-label="Close">&times;</button>
+    </div>
+    <iframe src="./resume.pdf" title="Resume"></iframe>
+    <div class="modal-actions">
+      <a href="./resume.pdf" download class="glass-btn">⬇ Download Resume</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
