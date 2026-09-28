@@ -177,3 +177,209 @@ if (!isCoarsePointer) {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 })();
+
+/* ---------- generated career visuals (canvas, no external images) ---------- */
+(function careerVisuals() {
+  const canvases = Array.from(document.querySelectorAll('canvas[data-viz]'));
+  if (!canvases.length) return;
+
+  const VIOLET = '139,92,246';
+  const FUCHSIA = '217,70,239';
+
+  function roundRect(ctx, x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+
+  function wrapText(ctx, text, cx, cy, maxWidth, lineHeight) {
+    const words = text.split(' ');
+    const lines = [];
+    let line = '';
+    words.forEach((word) => {
+      const test = line ? `${line} ${word}` : word;
+      if (ctx.measureText(test).width > maxWidth && line) {
+        lines.push(line);
+        line = word;
+      } else {
+        line = test;
+      }
+    });
+    lines.push(line);
+    const startY = cy - ((lines.length - 1) * lineHeight) / 2;
+    lines.forEach((l, i) => ctx.fillText(l, cx, startY + i * lineHeight));
+  }
+
+  function drawNetwork(s, t) {
+    const { ctx, w, h } = s;
+    ctx.clearRect(0, 0, w, h);
+    const nodes = [
+      [0.1, 0.5], [0.3, 0.22], [0.3, 0.78], [0.52, 0.5],
+      [0.74, 0.18], [0.74, 0.5], [0.74, 0.82], [0.92, 0.5],
+    ].map(([x, y]) => [x * w, y * h]);
+    const edges = [[0,1],[0,2],[1,3],[2,3],[3,4],[3,5],[3,6],[4,7],[5,7],[6,7]];
+
+    edges.forEach(([a, b], i) => {
+      ctx.strokeStyle = `rgba(${VIOLET},0.25)`;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(nodes[a][0], nodes[a][1]);
+      ctx.lineTo(nodes[b][0], nodes[b][1]);
+      ctx.stroke();
+
+      const phase = (t * 0.00035 + i * 0.15) % 1;
+      const px = nodes[a][0] + (nodes[b][0] - nodes[a][0]) * phase;
+      const py = nodes[a][1] + (nodes[b][1] - nodes[a][1]) * phase;
+      ctx.beginPath();
+      ctx.arc(px, py, 2.2, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${FUCHSIA},0.9)`;
+      ctx.fill();
+    });
+
+    nodes.forEach(([x, y]) => {
+      ctx.beginPath();
+      ctx.arc(x, y, 4, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${VIOLET},0.9)`;
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(x, y, 7.5, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(${VIOLET},0.3)`;
+      ctx.stroke();
+    });
+  }
+
+  function drawPipeline(s, t) {
+    const { ctx, w, h } = s;
+    ctx.clearRect(0, 0, w, h);
+    const stages = ['RAW DATA', 'AUTOMATION', 'REST API', 'RECOMMENDATIONS'];
+    const n = stages.length;
+    const boxW = (w / n) * 0.68;
+    const boxH = h * 0.4;
+    const y = h / 2 - boxH / 2;
+    const xs = stages.map((_, i) => (i + 0.5) * (w / n) - boxW / 2);
+
+    ctx.font = '9px "JetBrains Mono", monospace';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+
+    for (let i = 0; i < n - 1; i++) {
+      const startX = xs[i] + boxW;
+      const endX = xs[i + 1];
+      ctx.strokeStyle = `rgba(${VIOLET},0.3)`;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(startX, h / 2);
+      ctx.lineTo(endX, h / 2);
+      ctx.stroke();
+
+      const phase = (t * 0.0004 + i * 0.3) % 1;
+      const px = startX + (endX - startX) * phase;
+      ctx.beginPath();
+      ctx.arc(px, h / 2, 2.4, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${FUCHSIA},0.9)`;
+      ctx.fill();
+    }
+
+    stages.forEach((label, i) => {
+      const x = xs[i];
+      ctx.fillStyle = 'rgba(255,255,255,0.04)';
+      ctx.strokeStyle = `rgba(${VIOLET},0.4)`;
+      ctx.lineWidth = 1;
+      roundRect(ctx, x, y, boxW, boxH, 8);
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = 'rgba(233,225,255,0.85)';
+      wrapText(ctx, label, x + boxW / 2, y + boxH / 2, boxW - 10, 11);
+    });
+  }
+
+  function drawWave(s, t) {
+    const { ctx, w, h } = s;
+    ctx.clearRect(0, 0, w, h);
+    const bars = 26;
+    const gap = w / bars;
+    for (let i = 0; i < bars; i++) {
+      const amp = (Math.sin(t * 0.002 + i * 0.5) + 1) / 2;
+      const barH = 6 + amp * (h * 0.6);
+      const x = i * gap + gap * 0.25;
+      const bw = gap * 0.5;
+      const y = h / 2 - barH / 2;
+      const grad = ctx.createLinearGradient(0, y, 0, y + barH);
+      grad.addColorStop(0, `rgba(${FUCHSIA},0.9)`);
+      grad.addColorStop(1, `rgba(${VIOLET},0.5)`);
+      ctx.fillStyle = grad;
+      roundRect(ctx, x, y, bw, barH, bw / 2);
+      ctx.fill();
+    }
+  }
+
+  function drawMathGraph(s, t) {
+    const { ctx, w, h } = s;
+    ctx.clearRect(0, 0, w, h);
+
+    ctx.beginPath();
+    ctx.strokeStyle = `rgba(${VIOLET},0.18)`;
+    ctx.lineWidth = 1.2;
+    for (let x = 0; x <= w; x += 4) {
+      const y = h / 2 + Math.sin(x * 0.02 + t * 0.0006) * (h * 0.22);
+      if (x === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+    }
+    ctx.stroke();
+
+    const nodes = [
+      [0.08, 0.5], [0.24, 0.24], [0.24, 0.76], [0.42, 0.5],
+      [0.6, 0.2], [0.6, 0.8], [0.78, 0.38], [0.78, 0.64], [0.94, 0.5],
+    ].map(([x, y]) => [x * w, y * h]);
+    const edges = [[0,1],[0,2],[1,3],[2,3],[3,4],[3,5],[4,6],[5,7],[6,8],[7,8],[4,5]];
+
+    ctx.lineWidth = 1;
+    edges.forEach(([a, b]) => {
+      ctx.strokeStyle = `rgba(${FUCHSIA},0.28)`;
+      ctx.beginPath();
+      ctx.moveTo(nodes[a][0], nodes[a][1]);
+      ctx.lineTo(nodes[b][0], nodes[b][1]);
+      ctx.stroke();
+    });
+    nodes.forEach(([x, y], i) => {
+      const pulse = 3.4 + Math.sin(t * 0.002 + i) * 0.8;
+      ctx.beginPath();
+      ctx.arc(x, y, pulse, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${VIOLET},0.9)`;
+      ctx.fill();
+    });
+  }
+
+  const drawFns = { network: drawNetwork, pipeline: drawPipeline, wave: drawWave, mathgraph: drawMathGraph };
+
+  const state = canvases
+    .filter((canvas) => drawFns[canvas.dataset.viz])
+    .map((canvas) => ({ canvas, type: canvas.dataset.viz }));
+
+  function fitCanvas(s) {
+    const rect = s.canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+    s.canvas.width = Math.max(1, Math.round(rect.width * dpr));
+    s.canvas.height = Math.max(1, Math.round(rect.height * dpr));
+    s.ctx = s.canvas.getContext('2d');
+    s.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    s.w = rect.width;
+    s.h = rect.height;
+  }
+
+  function resizeAll() {
+    state.forEach(fitCanvas);
+  }
+
+  function frame(t) {
+    state.forEach((s) => drawFns[s.type](s, t));
+    requestAnimationFrame(frame);
+  }
+
+  resizeAll();
+  window.addEventListener('resize', resizeAll);
+  requestAnimationFrame(frame);
+})();
