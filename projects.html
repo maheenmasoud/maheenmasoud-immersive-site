@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Projects | Maheen Masoud</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+<title>Projects | Maheen Masoud</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22><rect width=%2240%22 height=%2240%22 rx=%228%22 fill=%22%23150422%22/><text x=%2220%22 y=%2227%22 font-family=%22Georgia,serif%22 font-size=%2220%22 fill=%22%23a78bfa%22 text-anchor=%22middle%22>M</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -22,11 +22,35 @@
   <div class="blob blob-3"></div>
 </div>
 
-<main class="projects-hero">
-  <div class="orbit"><div class="planet"></div></div>
-  <h1 class="section-title reveal visible">My Projects</h1>
-  <p style="color: var(--text-dim); font-size: 1.1rem;">More to come soon — check back for launch. 🛰️</p>
-  <a href="index.html" class="back-link">← Back home</a>
+<main>
+  <div class="projects-hero">
+    <span class="section-tag">Selected work</span>
+    <h1 class="section-title reveal visible">Projects</h1>
+  </div>
+
+  <div class="projects-grid">
+    <div class="project-card reveal visible">
+      <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 15s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <h3>Multi-Modal Emotion Detection</h3>
+      <p>A multimodal deep learning pipeline combining ResNet-18 for image-based emotion classification with BERT for text sentiment analysis. Uses OpenCV for real-time facial detection, speech recognition for conversational input, and gTTS for generating spoken feedback.</p>
+      <div class="chip-row">
+        <span class="chip">ResNet-18</span><span class="chip">BERT</span><span class="chip">OpenCV</span><span class="chip">Speech Recognition</span><span class="chip">gTTS</span>
+      </div>
+    </div>
+
+    <div class="project-card reveal visible">
+      <div class="p-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/><circle cx="12" cy="12" r="4"/></svg></div>
+      <h3>Nutrition Assistant</h3>
+      <p>A personal nutrition assistant with a Django backend and a TypeScript/Tailwind frontend. Integrates GPT-4, OpenFoodFacts, and OpenCV-based image recognition to deliver personalized dietary recommendations through natural conversation.</p>
+      <div class="chip-row">
+        <span class="chip">Django</span><span class="chip">TypeScript</span><span class="chip">GPT-4</span><span class="chip">OpenFoodFacts</span><span class="chip">OpenCV</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center; padding-bottom: 100px;">
+    <a href="index.html" class="back-link">← Back home</a>
+  </div>
 </main>
 
 <footer>

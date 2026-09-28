@@ -129,7 +129,7 @@ if (!isCoarsePointer) {
 (function typeEffect() {
   const el = document.querySelector('.hero-sub .typed');
   if (!el) return;
-  const phrases = ['Computer Science Student', 'Software Engineer', 'AI Enthusiast', 'Problem Solver'];
+  const phrases = ['Software Engineer @ Tradeweb', 'B.A. Computer Science & Math, Hamilton \'24', 'Graph Theory & AI', 'Building agentic dev tools'];
   let phraseIdx = 0, charIdx = 0, deleting = false;
 
   function tick() {
@@ -176,24 +176,4 @@ if (!isCoarsePointer) {
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
-})();
-
-/* ---------- resume modal ---------- */
-(function resumeModal() {
-  const overlay = document.getElementById('resumeModal');
-  const openBtn = document.getElementById('resume-button');
-  const closeBtn = document.querySelector('.modal-close');
-  if (!overlay || !openBtn) return;
-
-  openBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    overlay.classList.add('open');
-  });
-  closeBtn?.addEventListener('click', () => overlay.classList.remove('open'));
-  overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) overlay.classList.remove('open');
-  });
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') overlay.classList.remove('open');
-  });
 })();

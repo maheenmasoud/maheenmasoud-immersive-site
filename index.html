@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Maheen Masoud | Personal Website</title>
-<meta name="description" content="Maheen Masoud — Computer Science Student & Software Engineer.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+<title>Maheen Masoud | Software Engineer</title>
+<meta name="description" content="Maheen Masoud — Software Engineer at Tradeweb. B.A. Computer Science & Mathematics, Hamilton College. Interests in graph theory, AI, and applied math.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22><rect width=%2240%22 height=%2240%22 rx=%228%22 fill=%22%23150422%22/><text x=%2220%22 y=%2227%22 font-family=%22Georgia,serif%22 font-size=%2220%22 fill=%22%23a78bfa%22 text-anchor=%22middle%22>M</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -27,10 +27,13 @@
   <a href="#home"><span class="dot-label">Home</span></a>
   <a href="#about"><span class="dot-label">About</span></a>
   <a href="#experience"><span class="dot-label">Experience</span></a>
+  <a href="#education"><span class="dot-label">Education</span></a>
+  <a href="#research"><span class="dot-label">Research</span></a>
   <a href="#explore"><span class="dot-label">Explore</span></a>
 </nav>
 
 <header id="home" class="hero">
+  <span class="hero-eyebrow">Software Engineer · Hamilton College '24</span>
   <h1 class="hero-name">Maheen Masoud</h1>
   <p class="hero-sub">&gt; <span class="typed"></span><span class="caret">&nbsp;</span></p>
   <a href="#about" class="scroll-cue">
@@ -41,60 +44,194 @@
 
 <section id="about" class="section-wrap">
   <div class="container">
-    <div class="reveal">
+    <div class="about-grid reveal">
       <div class="avatar-card">
         <div class="avatar-inner">
           <img src="https://avatars.githubusercontent.com/maheenmasoud" alt="Maheen Masoud">
         </div>
       </div>
-    </div>
-    <h2 class="section-title reveal">About Me</h2>
-    <div class="bio-panel reveal">
-      <p>I am a computer science student with a passion for software engineering, AI, and developing impactful solutions. I love exploring the space between elegant code and real-world impact — one project at a time.</p>
-      <div class="social-row">
-        <a href="https://www.linkedin.com/in/maheen-masoud-b63360209/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.36 4.27 5.44v6.3zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
-        </a>
-        <a href="https://github.com/maheenmasoud" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.61-3.37-1.2-3.37-1.2-.45-1.18-1.11-1.49-1.11-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.33 1.1 2.9.84.09-.66.34-1.1.62-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.27 2.76 1.05a9.4 9.4 0 0 1 5.02 0c1.92-1.32 2.76-1.05 2.76-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.8-4.58 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
-        </a>
+      <div class="bio-panel">
+        <span class="section-tag">About</span>
+        <p>I'm a software engineer at Tradeweb, where I build agentic developer tooling and work on high-throughput, event-driven trading systems. I studied Computer Science and Mathematics at Hamilton College, graduating cum laude with departmental honors.</p>
+        <p>I'm drawn to the space where structure meets intelligence — graph theory, applied math, and AI systems that reason over complex data. Outside of work, I like turning that same curiosity toward side projects in machine learning.</p>
+        <div class="social-row">
+          <a href="https://www.linkedin.com/in/maheen-masoud-b63360209/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.36 4.27 5.44v6.3zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+          </a>
+          <a href="https://github.com/maheenmasoud" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.5 2.87 8.32 6.84 9.67.5.1.68-.22.68-.49 0-.24-.01-1.05-.01-1.9-2.78.61-3.37-1.2-3.37-1.2-.45-1.18-1.11-1.49-1.11-1.49-.9-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.55 2.33 1.1 2.9.84.09-.66.34-1.1.62-1.36-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.72 0 0 .84-.27 2.76 1.05a9.4 9.4 0 0 1 5.02 0c1.92-1.32 2.76-1.05 2.76-1.05.55 1.41.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.93-2.35 4.8-4.58 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.03 10.03 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          </a>
+          <a href="mailto:maheenmasoud54@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6 12 13 2 6"/><path d="M2 6h20v12H2z"/></svg>
+          </a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <section id="experience" class="section-wrap" style="background: rgba(255,255,255,0.02);">
-  <div class="container">
-    <h2 class="section-title reveal">Previous Experience</h2>
+  <div class="container center">
+    <span class="section-tag">Where I've worked</span>
+    <h2 class="section-title reveal">Experience</h2>
     <div class="timeline reveal">
       <div class="timeline-item">
-        <div class="timeline-role">Machine Learning Software Engineer Intern</div>
-        <div class="timeline-org">Asurion</div>
-        <p class="desc">Built and shipped ML-driven features, working across data pipelines and production software.</p>
+        <div class="timeline-head">
+          <div>
+            <span class="timeline-role">Software Engineer</span> — <span class="timeline-org">Tradeweb</span>
+          </div>
+          <span class="timeline-period">Mar 2025 – Present</span>
+        </div>
+        <ul class="desc">
+          <li>Built an agentic development platform integrating Jira, Claude, and GitLab to automate the software development lifecycle — now used by 3+ teams and 20+ engineers.</li>
+          <li>Helped drive 10% YoY trading volume growth by extending an event-driven credit trading platform to buy-side users.</li>
+          <li>Migrated two low-latency trading services to NestJS, cutting request latency by ~10%.</li>
+          <li>Added structured metrics and Grafana dashboards to monitor performance at peak trading volume.</li>
+        </ul>
+        <div class="chip-row">
+          <span class="chip">TypeScript</span><span class="chip">Node.js</span><span class="chip">NestJS</span><span class="chip">Kafka</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">ArgoCD</span>
+        </div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-role">Software Engineer Intern</div>
-        <div class="timeline-org">FairMarkit</div>
-        <p class="desc">Contributed to full-stack development on a procurement technology platform.</p>
+        <div class="timeline-head">
+          <div>
+            <span class="timeline-role">Machine Learning Software Engineer Intern</span> — <span class="timeline-org">Asurion</span>
+          </div>
+          <span class="timeline-period">May – Aug 2024</span>
+        </div>
+        <ul class="desc">
+          <li>Built the backend for a real-time call-center autocomplete feature, projected to save ~$600K annually.</li>
+          <li>Used Kafka-based logging to support 24/7 monitoring during a pilot with 20+ experts.</li>
+          <li>Collaborated across 6 cross-functional teams to ship the feature on Asurion's Expert-Assist platform.</li>
+        </ul>
+        <div class="chip-row">
+          <span class="chip">Python</span><span class="chip">AWS</span><span class="chip">AsyncIO</span><span class="chip">AIOHTTP</span><span class="chip">Kafka</span>
+        </div>
       </div>
       <div class="timeline-item">
-        <div class="timeline-role">Research Fellow — AI, Graph Theory</div>
-        <div class="timeline-org">Hamilton College</div>
-        <p class="desc">Researched applications of graph theory to AI systems.</p>
+        <div class="timeline-head">
+          <div>
+            <span class="timeline-role">Software Engineer Intern</span> — <span class="timeline-org">FairMarkit</span>
+          </div>
+          <span class="timeline-period">Jun – Aug 2023</span>
+        </div>
+        <ul class="desc">
+          <li>Automated ~20% of data queries with a Python tool, improving a recommendation engine's speed and accuracy.</li>
+          <li>Built 4 RESTful API endpoints backed by SQL and AWS S3 storage.</li>
+          <li>Wrote 15 pytest unit tests, increasing backend coverage by ~5%.</li>
+        </ul>
+        <div class="chip-row">
+          <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">AWS S3</span><span class="chip">Streamlit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education" class="section-wrap">
+  <div class="container">
+    <span class="section-tag">Background</span>
+    <h2 class="section-title reveal">Education & Honors</h2>
+    <div class="panel reveal">
+      <div class="edu-card">
+        <div>
+          <div class="edu-name">Hamilton College</div>
+          <div class="edu-degree">B.A., Computer Science &amp; Mathematics</div>
+        </div>
+        <div class="edu-meta">
+          Dec 2024<br>GPA 3.82/4.0<br>Cum Laude · Departmental Honors, CS
+        </div>
+      </div>
+      <div class="badge-grid">
+        <div class="badge">
+          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/><path d="M8.5 13.5 6 21l6-3 6 3-2.5-7.5"/></svg></div>
+          <div>
+            <div class="badge-title">Sam Welsch Memorial Prize</div>
+            <div class="badge-sub">Scholarship in Computer Science</div>
+          </div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+          <div>
+            <div class="badge-title">Outstanding Cambridge Learner — Mathematics</div>
+            <div class="badge-sub">Top in the world</div>
+          </div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+          <div>
+            <div class="badge-title">Outstanding Cambridge Learner — Physics</div>
+            <div class="badge-sub">Top in the region</div>
+          </div>
+        </div>
+        <div class="badge">
+          <div class="badge-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+          <div>
+            <div class="badge-title">Cum Laude &amp; Departmental Honors</div>
+            <div class="badge-sub">Computer Science, Hamilton College</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="research" class="section-wrap" style="background: rgba(255,255,255,0.02);">
+  <div class="container">
+    <span class="section-tag">What I'm curious about</span>
+    <h2 class="section-title reveal">Research &amp; Interests</h2>
+    <div class="research-grid reveal">
+      <div class="research-card">
+        <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M7.2 7.3 10 15.5M16.8 7.3 14 15.5M7.5 6h9"/></svg></div>
+        <h3>Graph Theory &amp; AI</h3>
+        <p>Research fellow at Hamilton College exploring applications of graph theory to AI systems — how structural representations of data can inform learning and reasoning.</p>
+      </div>
+      <div class="research-card">
+        <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19h16M4 15l4-5 3 3 5-7 4 5"/></svg></div>
+        <h3>Applied Mathematics</h3>
+        <p>A math background underpins how I approach engineering problems — from optimization in trading systems to the theory behind machine learning models.</p>
+      </div>
+      <div class="research-card">
+        <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
+        <h3>Machine Learning</h3>
+        <p>Side projects spanning multimodal emotion detection and applied NLP — see the Projects page for details on what I've built.</p>
+      </div>
+      <div class="research-card">
+        <div class="r-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h8l-1 8 10-12h-8l1-8z"/></svg></div>
+        <h3>Agentic Systems</h3>
+        <p>Currently building developer tooling that lets AI agents plan, implement, and review software changes end to end — a live extension of this same interest.</p>
+      </div>
+    </div>
+
+    <div class="toolbox reveal">
+      <h3>Languages</h3>
+      <div class="chip-row">
+        <span class="chip">TypeScript</span><span class="chip">Python</span><span class="chip">C++</span><span class="chip">SQL</span><span class="chip">Bash</span>
+      </div>
+      <h3>Technologies</h3>
+      <div class="chip-row">
+        <span class="chip">Node.js</span><span class="chip">NestJS</span><span class="chip">Django</span><span class="chip">GraphQL</span><span class="chip">Kafka</span><span class="chip">MongoDB</span><span class="chip">Redis</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">ArgoCD</span><span class="chip">AWS</span><span class="chip">Git</span>
       </div>
     </div>
   </div>
 </section>
 
 <section id="explore" class="section-wrap">
-  <div class="container">
-    <h2 class="section-title reveal">Explore More...</h2>
+  <div class="container center">
+    <span class="section-tag">Get in touch</span>
+    <h2 class="section-title reveal">Explore</h2>
     <div class="explore-row reveal">
-      <a href="#" class="glass-btn" id="resume-button">
-        📄 Resume
+      <a href="projects.html" class="glass-btn primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        My Projects
       </a>
-      <a href="projects.html" class="glass-btn">
-        🚀 My Projects
+      <a href="https://www.linkedin.com/in/maheen-masoud-b63360209/" target="_blank" rel="noopener noreferrer" class="glass-btn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.36 4.27 5.44v6.3zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.11 20.45H3.56V9h3.55v11.45z"/></svg>
+        Connect on LinkedIn
+      </a>
+      <a href="mailto:maheenmasoud54@gmail.com" class="glass-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 6 12 13 2 6"/><path d="M2 6h20v12H2z"/></svg>
+        Email Me
       </a>
     </div>
   </div>
@@ -103,19 +240,6 @@
 <footer>
   <p class="egg">1 + 1 = 10</p>
 </footer>
-
-<div id="resumeModal" class="modal-overlay">
-  <div class="modal-box">
-    <div class="modal-header">
-      <h2>My Resume</h2>
-      <button class="modal-close" aria-label="Close">&times;</button>
-    </div>
-    <iframe src="./resume.pdf" title="Resume"></iframe>
-    <div class="modal-actions">
-      <a href="./resume.pdf" download class="glass-btn">⬇ Download Resume</a>
-    </div>
-  </div>
-</div>
 
 <script src="script.js"></script>
 </body>
