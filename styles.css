@@ -347,23 +347,6 @@ section { position: relative; z-index: 10; }
   font-family: 'JetBrains Mono', monospace;
   white-space: nowrap;
 }
-.timeline-item ul.desc { margin-top: 12px; }
-.timeline-item ul.desc li {
-  color: var(--text-dim);
-  font-size: 0.95rem;
-  line-height: 1.6;
-  position: relative;
-  padding-left: 18px;
-  margin-top: 6px;
-}
-.timeline-item ul.desc li::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0.6em;
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  background: var(--violet-bright);
-}
 .chip-row { margin-top: 14px; display: flex; gap: 8px; flex-wrap: wrap; }
 .chip {
   font-size: 0.75rem;
